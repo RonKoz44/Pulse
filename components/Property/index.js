@@ -5,6 +5,7 @@ export default function Property({ model }) {
     return (
         <e.Container>
             <e.Title>{model.address1}</e.Title>
+
             <e.Address>
                 {model.city}, {model.postalCode}, {model.state}
             </e.Address>

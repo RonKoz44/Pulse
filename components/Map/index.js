@@ -1,16 +1,16 @@
 import PropTypes from 'prop-types';
 import * as rl from 'react-leaflet';
-import { createIcon, getBounds } from './utils';
-import * as e from './styles';
 import { useRef, useCallback } from 'react';
 import { useMount } from 'react-use';
+import { createIcon, getBounds } from './utils';
+import * as e from './styles';
 
 export default function Map({ models }) {
     const ref = useRef();
 
     const handleFitBounds = useCallback(() => {
         ref.current.leafletElement.fitBounds(getBounds(models), { padding: [20, 20] });
-    });
+    }, []);
 
     useMount(handleFitBounds);
 
