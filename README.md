@@ -4,7 +4,7 @@ In giving candidates small tasks to complete as part of the job interview proces
 
 ## Task
 
-We needed to create a pulse component that retrieved a list of properties on page load, but then established a web socket connection on the client to retrieve properties as they are added and/or modified in the system.
+We needed to create a pulse component that retrieved a list of properties on page load, but then establishes a web socket connection on the client to retrieve properties as they are added and/or modified in the system.
 
 The task has been partially completed by another developer &ndash; however it needs completing. Below is a list of the outstanding tasks that need to be finished off:
 
