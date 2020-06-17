@@ -7,9 +7,8 @@ export default function Index({ properties }) {
 }
 
 Index.getInitialProps = async () => {
-    const { data: properties } = await axios.get('http://localhost:3000/api/properties');
-
-    return { properties };
+    const instance = axios.create({ baseURL: 'http://localhost:3000' });
+    return { properties: (await instance.get('/api/properties')).data };
 };
 
 Index.propTypes = { properties: PropTypes.array.isRequired };
