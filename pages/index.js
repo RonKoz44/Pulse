@@ -14,15 +14,15 @@ export default function Index({properties}) {
       const propertyAlreadyExists = allProperties.find(property => property.postalCode === newProperty.postalCode);
 
       if (propertyAlreadyExists) {
-        setAllProperties(oldProperties => setAllProperties([{
+        setAllProperties(oldProperties => [{
           ...websocketMessage.message.model,
           key: Math.random() * 1000
-        }, ...oldProperties]));
+        }, ...oldProperties]);
       } else {
-        setAllProperties(oldProperties => setAllProperties([...oldProperties, {
+        setAllProperties(oldProperties => [...oldProperties, {
           ...websocketMessage.message.model,
           key: Math.random() * 1000
-        }]));
+        }]);
       }
     })
   }, [setAllProperties])
