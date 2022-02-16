@@ -8,7 +8,7 @@ export default function Property({model}) {
   const mapCenterCtx = useContext(mapCenterContext);
 
   const viewLocationHandler = () => {
-    mapCenterCtx.UpdateMapCoordinates([model.coordinates.lat, model.coordinates.lng]);
+    mapCenterCtx.updateMapCoordinates([model.coordinates.lat, model.coordinates.lng]);
   }
 
   return (
